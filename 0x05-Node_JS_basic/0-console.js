@@ -1,10 +1,10 @@
 /**
- * Displays a message on the STDOUT.
- * @param {String} msg The message to display.
- * @author Bezaleel Olakunori <https://github.com/B3zaleel>
+ *displayMessage: a simple js function that
+ *	logs a message passed as a parameter
+ *@message {message} parameter to be logged
  */
-const displayMessage = (msg) => {
-  console.log(msg);
+const displayMessage = (message) => {
+  console.log(message);
 };
 
 module.exports = displayMessage;

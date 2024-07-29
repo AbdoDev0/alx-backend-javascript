@@ -1,16 +1,19 @@
 const Utils = {
-  calculateNumber(type, a, b) {
-    if (type === 'SUM') {
-      return Math.round(a) + Math.round(b);
-    }
-    if (type === 'SUBTRACT') {
-      return Math.round(a) - Math.round(b);
-    }
-    if (type === 'DIVIDE') {
-      return Math.round(b) === 0 ? 'Error' : Math.round(a) / Math.round(b);
-    }
-    return 0;
-  },
+	calculateNumber: function (type, a, b) {
+		a = Math.round(a);
+		b = Math.round(b);
+		switch (type) {
+			case 'SUM':
+				return (a + b);
+			case 'SUBTRACT':
+				return (a - b);
+			case 'DIVIDE':
+				if (b === 0) {
+					return ('Error');
+				}
+				return (a / b);
+		}
+	}
 };
 
 module.exports = Utils;
